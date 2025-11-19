@@ -99,14 +99,4 @@ GitHub
 
 ---
 
-### 2. The GitHub "About" Section (Sidebar)
-
-This is crucial because your project involves both Python and JavaScript. You need to use keywords that highlight the **AI** aspect so recruiters don't skip it.
-
-**Description:**
-> A full-stack AI content generator built with FastAPI and React. Runs a fine-tuned T5 Transformer model locally to generate quotes, summaries, and titles without external APIs.
-
-**Topics (Tags):**
-`generative-ai` `fastapi` `react` `machine-learning` `nlp` `transformers` `full-stack` `t5-model` `python` `vite`
-
 **Paste these into your repository settings immediately.** It looks very impressive.
