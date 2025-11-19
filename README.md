@@ -1,103 +1,112 @@
-Hybrid AI Content Architect
+#  AI Content Architect (Full-Stack GenAI Assistant)
 
-Engineering Goal: Minimize inference costs and latency by implementing a tiered architecture that routes requests between a distilled local model and a Large Language Model (LLM) API.
+> A local, privacy-focused AI content generator built with **FastAPI**, **React**, and a fine-tuned **T5 Transformer** model.
 
-🏗️ System Architecture
+![Backend](https://img.shields.io/badge/Backend-FastAPI-green) ![Frontend](https://img.shields.io/badge/Frontend-React_Vite-blue) ![AI Model](https://img.shields.io/badge/Model-T5_Small-orange)
 
-The core innovation in this project is the Intelligent Routing Engine, which decides where to process data based on complexity.
+---
 
-graph TD
-    User[React Client] -->|POST Request| API[FastAPI Gateway]
-    API -->|Analyze Complexity| Router{Routing Logic}
-    
-    Router -->|Simple/Short| Local[Local T5-Small Model]
-    Router -->|Complex/Creative| Cloud[Gemini Flash API]
-    
-    Local -->|Result| Response
-    Cloud -->|Result| Response
-    
-    subgraph Edge Compute [Laptop / CPU]
-    Local
-    end
-    
-    subgraph Cloud Tier [Google Cloud]
-    Cloud
-    end
+##  About The Project
+Most AI writing tools rely on expensive external APIs (like OpenAI). **AI Content Architect** is different. It runs a **fine-tuned T5-Small model entirely locally**, allowing users to generate creative content (quotes, summaries, and blog titles) with **zero latency** and **zero cost**.
 
+This project bridges the gap between **Machine Learning** and **Full-Stack Engineering**, demonstrating how to serve heavy AI models via a lightweight REST API to a modern frontend.
 
-🚀 Key Features
+###  Key Features
+* **Multi-Mode Generation:** Capable of generating **Quotes**, **Summaries**, and **Creative Titles** based on user prompts.
+* **Local Inference:** Runs the T5 model on the CPU/GPU without making external API calls.
+* **FastAPI Backend:** High-performance asynchronous API documentation (Swagger UI) enabled.
+* **Modern Frontend:** Built with React and Vite for a lightning-fast, responsive user experience.
 
-1. Cost-Optimized Inference
+---
 
-Local-First Strategy: 70% of requests (captions, simple summaries) are handled by a fine-tuned T5-Small (60M params) model running on-device (CPU).
+##  Tech Stack
 
-Zero Latency Cost: Local inference averages 120ms vs 800ms+ for cloud roundtrips.
+### Backend (The Brain)
+* **Framework:** FastAPI (Python)
+* **ML Library:** Hugging Face Transformers & PyTorch
+* **Model:** T5-Small (Fine-tuned for text-to-text generation)
 
-2. Cloud Fallback & Escalation
+### Frontend (The Interface)
+* **Framework:** React.js (Vite)
+* **Styling:** CSS Modules / Tailwind (depending on your implementation)
+* **State Management:** React Hooks (useState, useEffect)
 
-Requests requiring "Creativity" (Hashtags) or "Deep Context" (Long summaries) automatically escalate to Google Gemini 2.5 Flash.
+---
 
-Fail-safe implemented: If local inference fails, the system silently falls back to cloud.
+##  System Architecture
 
-🛠️ Tech Stack
+The application follows a strict **Client-Server** architecture:
 
-Model Training: PyTorch, HuggingFace Trainer (Fine-tuned on Colab T4).
+1.  **The React Client:** Captures user prompts and desired content type (e.g., "Generate a quote about Success").
+2.  **The API Layer:** Sends an asynchronous `POST` request to the FastAPI backend.
+3.  **The Inference Engine:**
+    * The backend receives the text.
+    * It creates a specific prompt prefix (e.g., `summarize: ...`).
+    * It feeds the text into the loaded **T5 Tokenizer** and **Model**.
+    * It decodes the generated tokens back into human-readable text.
+4.  **The Response:** The generated content is sent back as a JSON response to be displayed on the UI.
 
-Backend: FastAPI, Uvicorn (Async implementation).
+---
 
-Frontend: React + Vite, Tailwind CSS.
+##  How to Run Locally
 
-External API: Google Gemini (Generative Language API).
+### Prerequisites
+* Python 3.8+
+* Node.js & npm
 
-💻 Setup & Run
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/SaravanaKumar056/ai-content-architect.git](https://github.com/SaravanaKumar056/ai-content-architect.git)
+cd ai-content-architect
+2. Backend Setup (FastAPI)
+Bash
 
-Clone Repo
-
-git clone [https://github.com/yourname/ai-content-architect.git](https://github.com/yourname/ai-content-architect.git)
-
-
-Backend Setup
-
-Place your fine-tuned T5 model in backend/local_model.
-
-Add your API Key in main.py.
-
+# Navigate to backend folder
 cd backend
-pip install -r requirements.txt
+
+# Install Python dependencies
+pip install fastapi uvicorn transformers torch
+
+# Start the API Server
 uvicorn main:app --reload
+# Server will start at http://localhost:8000
+3. Frontend Setup (React)
+Bash
 
-
-Frontend Setup
-
+# Open a new terminal and navigate to frontend folder
 cd frontend
+
+# Install dependencies
 npm install
+
+# Start the React Dev Server
 npm run dev
+# Client will start at http://localhost:5173
+ Future Scope
+Model Quantization: Implement ONNX runtime to make the model faster and lighter.
+
+Database Integration: Add MongoDB to save user generation history.
+
+Docker Support: Containerize the Frontend and Backend for one-click deployment.
+
+ Author
+Saravanakumar B
+
+LinkedIn
+
+GitHub
 
 
-📈 Performance Metrics
+---
 
-Metric
+### 2. The GitHub "About" Section (Sidebar)
 
-Local T5
+This is crucial because your project involves both Python and JavaScript. You need to use keywords that highlight the **AI** aspect so recruiters don't skip it.
 
-Gemini Cloud
+**Description:**
+> A full-stack AI content generator built with FastAPI and React. Runs a fine-tuned T5 Transformer model locally to generate quotes, summaries, and titles without external APIs.
 
-Latency
+**Topics (Tags):**
+`generative-ai` `fastapi` `react` `machine-learning` `nlp` `transformers` `full-stack` `t5-model` `python` `vite`
 
-~150ms
-
-~900ms
-
-Cost
-
-$0.00
-
-API Rate
-
-Privacy
-
-100% Local
-
-Data sent to Cloud
-
-Developed by Saravanakumar | Focus: Scalable ML Systems & Full Stack Engineering
+**Paste these into your repository settings immediately.** It looks very impressive.
